@@ -22,7 +22,11 @@ export class CartComponent implements OnInit, OnDestroy {
   dataSource: CartItem[] = [];
   cartSubscription: Subscription | undefined;
 
-  constructor(private cartService: CartService, private http: HttpClient) {}
+  constructor(
+    // this.cart = JSON.parse(localStorage.getItem('cart')) || [],
+    private cartService: CartService,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.cartSubscription = this.cartService.cart.subscribe((_cart: Cart) => {
