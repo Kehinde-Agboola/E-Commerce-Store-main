@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
-
+import { Cart } from 'src/app/models/cart.model';
 @Component({
   selector: '[app-product-box]',
   templateUrl: './product-box.component.html',
